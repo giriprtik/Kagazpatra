@@ -1,0 +1,28 @@
+# --- API ---
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+SQLAlchemy>=2.0
+# psycopg[binary]>=3.2        # uncomment for PostgreSQL (NEPDOC_DATABASE_URL=postgresql+psycopg://…)
+
+# --- imaging ---
+Pillow>=10.4
+opencv-python-headless>=4.10
+numpy>=1.26
+pypdfium2>=4.30
+beautifulsoup4>=4.12
+pillow-heif>=0.18           # iPhone HEIC photos
+
+# --- models (local) ---
+torch>=2.5                     # MPS on Apple Silicon, CPU elsewhere
+doclayout-yolo==0.0.4          # AGPL-3.0 (see AUDIT.md §licensing)
+surya-ocr>=0.24,<0.25          # 2.x API; uses llama.cpp's `llama-server` (brew install llama.cpp)
+huggingface-hub>=0.24
+
+# --- Nepali post-processing & fallbacks ---
+nepali-datetime>=1.0.8
+pytesseract>=0.3.13            # fallback OCR (brew install tesseract tesseract-lang)
+
+# --- dev ---
+pytest>=8
+httpx>=0.27
